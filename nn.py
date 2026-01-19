@@ -30,7 +30,7 @@ HOOK_DIR = os.path.expanduser("~/.task/hooks/priority")
 CONFIG_FILE = os.path.join(HOOK_DIR, "need.rc")
 
 # Debug mode - set to 1 to enable debug output
-DEBUG = 1
+DEBUG = 0
 
 def debug_print(msg):
     """Print debug message if DEBUG is enabled"""
@@ -220,7 +220,21 @@ def show_report():
     ]
     
     for level, label in pyramid:
-        marker = '|->' if level == lowest_level else '   '
+        # Calculate span range: lowest to (lowest + span - 1), capped at 6
+        if lowest_level:
+            lowest_int = int(lowest_level)
+            span_int = int(span)
+            highest_in_span = min(lowest_int + span_int - 1, 6)
+            level_int = int(level)
+            
+            # Show arrow if this level is within the span
+            if lowest_int <= level_int <= highest_in_span:
+                marker = '|->'
+            else:
+                marker = '   '
+        else:
+            marker = '   '
+        
         count = counts[level]
         print(f" {marker} {level} {label} ({count})")
     
