@@ -1,4 +1,4 @@
-# tw-priority-hook
+# tw-need_priority-hook
 
 Priority-based task filtering for Taskwarrior based on Maslow's hierarchy of needs.
 
@@ -165,15 +165,15 @@ The hooks automatically maintain `context.needs.read` in need.rc:
 **The filter is always current** - just activate when you want it:
 
 ```bash
-task context needs   # Use the auto-maintained filter
-task context none    # See everything
+task context need    # Use the automatically generated context.need.read filter
+task context none    # Stops all context filtering
 ```
 
 With `priority.span=2`, `priority.lookahead=2d`, and `priority.lookback=1w`:
 
 1. **You have pri:1 tasks:**
    ```
-   context.needs.read=priority:1 or priority:2 or ( due.before:today+2d and due.after:today-1w ) or ( scheduled.before:today+2d and sched.after:today-1w )
+   context.need.read=priority:1 or priority:2 or ( due.before:today+2d and due.after:today-1w ) or ( scheduled.before:today+2d and sched.after:today-1w )
    ```
    Shows: pri:1-2 tasks, plus tasks due/scheduled in the next 2 days (but not older than 1 week overdue)
 
@@ -202,7 +202,7 @@ task nn
 task nn review
 
 # Activate the context
-task context needs
+task context need
 
 # View filtered list (only lowest priority levels + upcoming)
 task list
@@ -222,7 +222,7 @@ task context none
 task list
 
 # Back to filtered view
-task context needs
+task context need
 ```
 
 ## Priority Report
