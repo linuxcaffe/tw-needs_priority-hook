@@ -39,7 +39,7 @@ priority.5.auto=+creative,+art,+music,+writing,proj:creative,proj:personal
 priority.6.auto=+goals,+dreams,+legacy,proj:goals,proj:vision
 
 # Context span setting - how many priority levels to show above minimum
-priority.span=3
+priority.span=$[priority.span]
 
 # Due/scheduled lookahead - always show tasks due/scheduled soon
 # Format: <number><unit> where unit = d(ays), w(eeks), m(onths), y(ears)
@@ -51,7 +51,7 @@ priority.lookback=1w
 
 # Context definition (auto-maintained by hooks)
 # Uses pri.after:N syntax where pri.after:3 shows pri:1 and pri:2
-context.need.read=pri.after:4 or ( scheduled.before:today+2d and sched.after:today-1w ) or ( due.before:today+2d and due.after:today-1w )
+context.need.read=
 ### include started
 
 # Command alias for nn (Needs Navigator)
