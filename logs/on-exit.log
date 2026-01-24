@@ -8774,3 +8774,8 @@
 [2026-01-23 13:10:09] Calling update_context_in_config()
 [2026-01-23 13:10:09] Error updating context: invalid literal for int() with base 10: '$[priority.span]'
 [2026-01-23 13:10:09] Update completed: False
+[2026-01-23 17:40:45] === ON-EXIT TRIGGERED ===
+[2026-01-23 17:40:45] Input received: 0 bytes
+[2026-01-23 17:40:45] Calling update_context_in_config()
+[2026-01-23 17:40:45] Error updating context: invalid literal for int() with base 10: '$[priority.span]'
+[2026-01-23 17:40:45] Update completed: False
