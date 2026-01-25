@@ -1,5 +1,5 @@
 # need.rc - Priority-based filtering configuration
-# Include in .taskrc with: include ~/.task/hooks/priority/need.rc
+# Include in .taskrc with: include ~/.task/config/need.rc
 
 # UDA Definition
 uda.priority.type=string
@@ -56,6 +56,6 @@ context.need.read=
 
 # Command alias for nn (Needs Navigator)
 # NOTE: Taskwarrior aliases cannot pass arguments like 'span 2'
-# To use nn with arguments, call directly: ~/.task/hooks/priority/nn.py span 2
-# Or add to ~/.bashrc: alias nn='~/.task/hooks/priority/nn.py'
-alias.nn=exec sh -c '~/.task/hooks/priority/nn.py'
+# To use nn with arguments, call directly: ~/.task/hooks/priority/nn span 2
+# Or add to ~/.bashrc: alias nn='~/.task/hooks/priority/nn'
+alias.nn=exec sh -c '~/.task/hooks/priority/nn'
