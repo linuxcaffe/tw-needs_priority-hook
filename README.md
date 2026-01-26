@@ -1,4 +1,5 @@
 # tw-need_priority-hook
+# v0.3.5
 
 Priority-based task filtering for Taskwarrior based on Maslow's hierarchy of needs.
 
